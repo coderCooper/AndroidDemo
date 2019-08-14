@@ -41,6 +41,7 @@ public class AddressSecDialog extends Dialog {
     public Animation mExitAnim;//退出动画
     public Animation mEnterAnim;//进入动画
 
+    private View proView;
     private ListView mListView;
     private TextView pTv;       // 省
     private TextView cTv;       // 市
@@ -118,6 +119,7 @@ public class AddressSecDialog extends Dialog {
 
     private void initView(){
         mCreateView.findViewById(R.id.iv_close).setOnClickListener(clickListener);
+        proView = mCreateView.findViewById(R.id.progressBar);
         mListView = mCreateView.findViewById(R.id.listview);
         mListView.setOnItemClickListener(itemClickListener);
         pTv = mCreateView.findViewById(R.id.tv00);
@@ -196,6 +198,9 @@ public class AddressSecDialog extends Dialog {
 
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            if (proView.getVisibility() == View.VISIBLE){
+                return;
+            }
             EnteryBean bean = curDatas.get(i);
             switch (mShowIndex){
                 case Arae:
@@ -266,15 +271,17 @@ public class AddressSecDialog extends Dialog {
     };
 
     private void request(final String parent){
+        proView.setVisibility(View.VISIBLE);
         OKHttpUtils.queryArrress(parent, new MyResultCallback<JSONArray>() {
 
             @Override
             public void onFail(JSONArray response, int error, String msg) {
-
+                proView.setVisibility(View.GONE);
             }
 
             @Override
             public void onResponse(JSONArray response) {
+                proView.setVisibility(View.GONE);
 
                 ArrayList<EnteryBean> enterys = new ArrayList<EnteryBean>();
 
