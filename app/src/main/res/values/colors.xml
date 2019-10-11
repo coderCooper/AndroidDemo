@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="c_title">#3C9FF6</color>
     <color name="c_title_down">#0F81E4</color>
 
@@ -51,4 +52,6 @@
     <color name="text_D8D8D8">#D8D8D8</color>
     <color name="text_2EA6F9">#2EA6F9</color>
     <color name="text_282828">#282828</color>
+    <color name="text_FBC936">#FBC936</color>
+
 </resources>
