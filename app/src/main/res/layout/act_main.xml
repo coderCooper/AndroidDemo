@@ -10,4 +10,16 @@
         android:layout_height="44dp"
         android:text="打开地址选择弹窗" />
 
+
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="打开商品sku选择" />
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/qrcode" />
 </LinearLayout>

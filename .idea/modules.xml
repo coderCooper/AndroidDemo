@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidBackDemp.iml" filepath="$PROJECT_DIR$/AndroidBackDemp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidBackDemo.iml" filepath="$PROJECT_DIR$/AndroidBackDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
